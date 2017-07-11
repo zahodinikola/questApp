@@ -12,8 +12,22 @@
         <div ng-controller="answerController">
             <form name="answerForm">
                 <fieldset>
-                    <p><label for="answerText">Answer Text</label></p>
-                    <input id="answerAuthor"
-        </div>
+                    <p><label for="answerText">Answer Text</label>
+                    <input id="answerText" ng-model="answer.text" required placeholder="Enter answer" /></p>
+					<p><label for="answerAuthor">Answer author</label>
+					<input id="answerAutor" ng-model="answer.author" required placeholder="Enter author" /></p>
+				</fieldset>
+				<p><button type="submit" ng-click="save(answer, answerForm)">Save</button></p>
+			</form>
+			<div>Answer:</div>
+				<p ng-bind="response.text"></p>
+				<p ng-bind="response.author"></p>
+			</div>
+		</div>
+		
+		<script src="./node_modules/angular/angular.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/controllers/answerController.js"></script>
+		
     </body>
 </html>

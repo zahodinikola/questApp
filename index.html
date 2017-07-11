@@ -10,8 +10,7 @@
     <body>  
         <div ng-controller="questionController">
             
-            <button ng-click="load()">Load</button>
-            <div class="content" ng-show="loaded">
+            <div class="content">
                         <div class="quest">
                             <h3>{{question.text}}</h3>
                             <p>{{question.author}}</p> <p><i>{{question.date}}</i></p>
@@ -20,9 +19,9 @@
                         <div class="answers">
                             <div ng-repeat="answer in question.answers | orderBy: sortparam" class="answer">
                                 <div class="vote">
-                                    <a class="vote-up" ng-click="voteUp(answer)"></a>
-                                    <span class="rate" {{answer.rate}}</span>
-                                    <a class="vote-down" ng-click="voteDown(answer)"></a>
+                                    <a class="vote-up" ng-click="voteUp(answer)">Vote up</a>
+                                    <span class="rate">{{answer.rate}}</span>
+                                    <a class="vote-down" ng-click="voteDown(answer)">Vote down</a>
                                 </div>
                                 <b>{{answer.text}}</b>
                                 <p>{{answer.author}}</p>

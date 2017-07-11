@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="" />
+        <script src="./node_modules/angular/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-controller="domController">
+            <button ng-click="getAlert('Hello, world')">Don't push</button>
+            <button id="angButton">Push</button>
+        </div>
+        <script>
+            var myApp = angular.module('myApp', []);
+            myApp.controller('domController', function($scope, $window, $document) {
+
+                $scope.getAlert = function (text) {
+                    $window.alert(text);
+                };
+                $document.find("button").on("click", function(event) {
+                    $window.alert(event.target.innerText);
+                });
+            });
+            </script>
+    </body>
+</html>

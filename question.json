@@ -6,11 +6,13 @@
                     "date": "20.12.2017",
                     "answers":
                     [{
+                        "id": 1,
                         "text": "Angular JS!",
                         "author": "Vova Sidoroff",
                         "date": "20.12.2017",
                         "rate": "2"
                     },{
+                        "id": 2,
                         "text": "Angular JS is the best!",
                         "author": "Oleg Kuznecov",
                         "date":"20.12.2017",
